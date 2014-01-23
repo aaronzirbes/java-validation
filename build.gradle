@@ -22,6 +22,8 @@ dependencies {
     compile 'org.slf4j:slf4j-api:1.7.2'
     compile 'com.google.code.findbugs:annotations:2.0.1'
 
+    compile "org.hibernate:hibernate-validator:4.3.0.Final"
+
     testCompile "org.spockframework:spock-core:${spockVersion}"
     testCompile 'junit:junit:4.11'
     testCompile 'org.hamcrest:hamcrest-core:1.3'
