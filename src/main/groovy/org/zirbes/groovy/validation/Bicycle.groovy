@@ -12,9 +12,11 @@ class Bicycle {
 
     TireType tireType
 
-
     Integer frameSize
 
     MeasurementType frameMeasurement
 
+    String toString() {
+        "${frameSize}${frameMeasurement.name().toLowerCase()} ${manufacturer} ${model}"
+    }
 }

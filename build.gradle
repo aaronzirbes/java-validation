@@ -8,6 +8,9 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     mavenLocal()
     mavenCentral()
+
+    // Spock snapshots are available from the Sonatype OSS snapshot repository
+    maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
 }
 
 // In this section you declare the dependencies for your production and test code

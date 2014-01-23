@@ -3,7 +3,7 @@ package org.zirbes.groovy.validation
 enum MeasurementType {
     MM('Millimeters'),
     CM('Centimeters'),
-    INCHES('Inches')
+    IN('Inches')
 
     MeasurementType(String desc) {
         this.desc = desc
