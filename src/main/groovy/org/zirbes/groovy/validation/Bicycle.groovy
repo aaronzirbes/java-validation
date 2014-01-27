@@ -4,6 +4,7 @@ import javax.validation.constraints.Max
 import javax.validation.constraints.Min
 import javax.validation.constraints.NotNull
 
+@ValidBicycle
 class Bicycle {
 
     @NotNull

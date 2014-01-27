@@ -72,5 +72,24 @@ class BicycleSpec extends Specification {
         40    || 0      | ''
         80    || 1      | 'must be less than or equal to 62'
     }
+
+    void 'a bike that surly does not make'() {
+        given:
+        Bicycle bike = new Bicycle(
+            manufacturer: 'Surly',
+            model: 'Worldsport',
+            frameSize: 42,
+            frameMeasurement: MeasurementType.CM
+        )
+
+        when:
+        Set<ConstraintViolation<Bicycle>> violations = validator.validate(bike)
+        List<String> violationMessages = violations*.message
+
+        then:
+        violations.size() == 2
+        'That is not a real bike.' == violationMessages.first()
+        'Surly does not make a Worldsport model.' == violationMessages.last()
+    }
 }
 
